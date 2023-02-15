@@ -4,7 +4,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
 
 
-class test():
+class Scrapper():
     def __init__(self) -> None:
         self.driver = webdriver.Firefox()
 
@@ -16,9 +16,9 @@ class test():
         self.names=[i.get_attribute("innerHTML") for i in cn]
         print(self.names)
         
-    def rescarp(self,link):
+    def mul_scarp(self,link):
         a=[]
-        for i in self.n:
+        for i in self.n[:5]:
             self.driver.get(i)
             self.driver.implicitly_wait(1)
             kn = self.driver.find_elements(by=By.ID, value=link)
